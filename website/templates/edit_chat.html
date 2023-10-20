@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}(Admin Only) Edit Chat history{% endblock %} {% block content %}
+
+  <div class="history"></div>
+    <hr/>
+    <h4>(Admin Only) Edit Chat history</h4>
+    <br>
+    {% for message in messages %}
+
+        <p>User #: {{message.user_.name}}</p>  
+        <p>User Message: {{message.request_text}}</p>  
+        <p>Original Answer: {{message.response_text}}</p>  
+        <p>Edited Answer: {{message.edit_response_text}}</p> 
+        <p>Date: {{message.date_created}}</p>  
+        <a href="/train/{{message.id}}">Train</a>
+        <br>
+        <!-- <a href="/edit_update/{{message.id}}">(Edit Model's reply)</a>
+        <a href="/edit_delete/{{message.id}}">(Delete)</a> -->
+        <hr/>
+    {% endfor %}
+
+  </div>
+    {% endblock %}

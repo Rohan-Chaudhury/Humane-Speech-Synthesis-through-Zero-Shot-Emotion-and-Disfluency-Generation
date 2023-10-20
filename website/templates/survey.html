@@ -1,0 +1,71 @@
+{% extends "base.html" %} {% block title %}Survey{% endblock %} {% block
+    content %}
+    <form method="POST">
+      <h3 align="center">Survey for Research Usage</h3>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter TAMU email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Enter name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password1"
+          name="password1"
+          placeholder="Enter password"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password2">Password (Confirm)</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password2"
+          name="password2"
+          placeholder="Confirm password"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Age">Age</label>
+        <input type="number" class="form-control" id="Age" name="Age" min="10" max="80" placeholder="Enter age"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="Gender" class="container">Gender</label>
+        <input type="radio" id="gender" name="gender" class="survey" value="male"> Male
+        <input type="radio" id="gender" name="gender" class="survey" value="female"> Female
+        <input type="radio" id="gender" name="gender" class="survey" value="unknown"> Unknown	
+      </div>
+      <div class="form-group">
+        <label for="Profession" class="container">Profession</label>
+        <input type="radio" id="profession" name="profession" class="survey" value="Faculty"> Faculty
+        <input type="radio" id="profession" name="profession" class="survey" value="Staff"> Staff
+        <input type="radio" id="profession" name="profession" class="survey" value="Freshman"> Freshman
+        <input type="radio" id="profession" name="profession" class="survey" value="Sophomore"> Sophomore
+        <input type="radio" id="profession" name="profession" class="survey" value="Junior"> Junior
+        <input type="radio" id="profession" name="profession" class="survey" value="Senior"> Senior
+        <input type="radio" id="profession" name="profession" class="survey" value="Graduate"> Graduate
+        
+      </div>
+
+      <button type="submit" class="btn btn-secondary 10">Submit</button>
+    </form>
+    {% endblock %}

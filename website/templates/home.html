@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+
+
+<div class="chatbox">
+  <div class="chatbox__support chatbox--active">
+      <div class="chatbox__header">
+          <div class="chatbox__image--header">
+              <img src="https://img.icons8.com/color/2x/circled-user-male-skin-type-4.png" width="90px" alt="image">
+          </div>
+          <div class="chatbox__content--header">
+              <h4 class="chatbox__heading--header">SBIRT Practice with Zimmerman</h4>
+              <p class="chatbox__description--header">Hi. I am Pastor Zimmerman. <br> I am visiting the clinic.<br> Be my nurse! </p>
+            </div>
+        </div>
+        <div class="chatbox__messages">
+            <div></div>
+        </div>
+        <div class="chatbox__footer">
+            <input type="text" placeholder="Write a message..." autofocus=autofocus>
+            <button class="chatbox__send--footer send__button">Send</button>
+            <button class="chatbox__send--footer reset__button">Reset</button>
+        </div>
+    </div>
+  </div>
+
+{% endblock %}

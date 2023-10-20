@@ -1,0 +1,8 @@
+flask
+Flask-SQLAlchemy
+flask-login
+flask-ngrok
+pyngrok
+scikit-learn
+sentence-transformers
+keyboard

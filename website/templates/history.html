@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %}Chat history{% endblock %} {% block content %}
+  <h1 align="center">Notes</h1>
+  <ul class="list-group list-group-flush" id="notes">
+    {% for note in notes %}
+    <li class="list-group-item">
+      {{ note.data }}
+      <button type="button" class="close" onClick="deleteNote({{note.id}})">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+  <form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br />
+    <div align="center">
+      <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+  </form>
+
+  <hr/>
+  <h4>Chat history</h4>
+  <br>
+  {% if user.email != 'admin@tamu.edu' %}
+    {% for message in user.chats %}
+      <p>User message: {{message.request_text}}</p>  
+      <p>Model's reply: {{message.response_text}}</p>  
+      <p>Date: {{message.date_created}}</p>  
+      <a href="/update/{{message.id}}">(Edit Model's reply)</a>
+      <a href="/delete/{{message.id}}">(Delete)</a>
+      <hr/>
+    {% endfor %}
+  {% else %}
+    {% for message in messages %}
+      <p>User #: {{message.user_.name}}</p>  
+      <p>User message: {{message.request_text}}</p>  
+      <p>Model's reply: {{message.response_text}}</p>  
+      <p>Date: {{message.date_created}}</p>  
+      <a href="/update/{{message.id}}">(Edit Model's reply)</a>
+      <a href="/delete/{{message.id}}">(Delete)</a>
+      <hr/>
+    {% endfor %}
+  {% endif %}
+
+{% endblock %}

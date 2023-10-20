@@ -1,0 +1,12 @@
+{%extends'base.html'%}
+{%block title%}Edit Model Answer{%endblock%}
+{%block content%}
+    <div class="container">
+       <h4>Edit Zimmerman's response</h4>
+       <br/>
+       <form action="/edit_update/{{message_to_update.id}}" METHOD="POST">
+         <input type="text" placeholder="Sam" name="Sam" value="{{message_to_update.response_text}}">
+         <input type="submit"value="Update Answer" class="btn btn-secondary">
+       </form>
+    </div>
+{%endblock%}
