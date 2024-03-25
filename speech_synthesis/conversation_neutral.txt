@@ -1,0 +1,12 @@
+User: Hi, I am your nurse Rohan, and I would be helping you today
+Zimmerman: Hello, Rohan.
+User: could you please let me know why are you here today?
+Zimmerman: Had a nodule removed, related to drinking.
+User: I am so sorry to hear that, may I ask if you have cut down on your drinking now?
+Zimmerman: Trying, but struggling.
+User: I am so sorry Zimmerman, may I know why are you not able to cut down on your drinking?
+Zimmerman: It's my coping mechanism for my wife's Alzheimer's.
+User: Could you please tell me more about that? I am here to help
+Zimmerman: Her good and bad days affect me greatly.
+User: Please calm down Zimmerman, I am here to help, please tell me your problems in details
+Zimmerman: My son's busy with PhD, can't help much. Wife deteriorating. That's why I drink.
